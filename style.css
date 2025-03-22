@@ -46,17 +46,21 @@ nav ul li{
     padding: 34px;
     background-image: url('bg.jpg');
 }
-.bottom{
-    position: sticky;
-    height: 130px;
-    background-color: black;
+.bottom {
+    position: fixed; /* Change from sticky to fixed */
     bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white ;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000; /* Ensures it stays on top */
 }
+
 .icons{
     margin-top: 20px;
 }
@@ -117,3 +121,11 @@ nav ul li{
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
 }
+
+
+.container {
+    max-width: 90vw; /* Adjust width to fit better */
+    margin: 10px auto;
+    overflow: hidden;
+}
+
